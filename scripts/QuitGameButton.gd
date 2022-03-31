@@ -1,11 +1,13 @@
 extends TextureButton
 
 
-# var a = 2
+var platform = OS.get_name()
 
 
 func _ready():
-	pass
+	# Disable if running in browser
+	if platform == "HTML5":
+		self.disabled = true
 
 
 func _process(delta):
@@ -13,4 +15,5 @@ func _process(delta):
 
 
 func _on_QuitGameButton_pressed():
+	release_focus()
 	get_tree().quit()
