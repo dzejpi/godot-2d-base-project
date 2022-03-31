@@ -33,7 +33,7 @@ __meta__ = {
 }
 
 [node name="MusicButton" type="TextureButton" parent="MenuButtons"]
-margin_top = 64.0
+margin_top = 96.0
 margin_right = 256.0
 margin_bottom = 128.0
 toggle_mode = true
@@ -54,7 +54,7 @@ align = 1
 valign = 1
 
 [node name="SoundButton" type="TextureButton" parent="MenuButtons"]
-margin_top = 128.0
+margin_top = 192.0
 margin_right = 256.0
 margin_bottom = 192.0
 toggle_mode = true
@@ -75,7 +75,7 @@ align = 1
 valign = 1
 
 [node name="CreditsButton" type="TextureButton" parent="MenuButtons"]
-margin_top = 192.0
+margin_top = 288.0
 margin_right = 256.0
 margin_bottom = 256.0
 texture_normal = ExtResource( 1 )
@@ -95,7 +95,7 @@ align = 1
 valign = 1
 
 [node name="QuitGameButton" type="TextureButton" parent="MenuButtons"]
-margin_top = 256.0
+margin_top = 384.0
 margin_right = 256.0
 margin_bottom = 320.0
 texture_normal = ExtResource( 1 )
