@@ -1,9 +1,6 @@
 extends TextureButton
 
 
-onready var pause_scene = $"../PauseScene"
-
-
 func _ready():
 	pass
 
