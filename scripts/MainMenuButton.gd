@@ -12,5 +12,5 @@ func _process(delta):
 	pass
 
 
-func _on_BackToMenuButton_pressed():
+func _on_MainMenuButton_pressed():
 	get_tree().change_scene("res://scenes/MainMenuScene.tscn")
