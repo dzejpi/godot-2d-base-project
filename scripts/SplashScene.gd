@@ -3,6 +3,7 @@ extends Node2D
 
 onready var dev_logo_sprite = $DevLogoSprite
 onready var jam_logo_sprite = $JamLogoSprite
+onready var transition_overlay_sprite = $TransitionOverlay/TransitionSprite
 
 var screen_width = (OS.window_size.x / 2)
 var screen_height = (OS.window_size.y / 2)
@@ -18,6 +19,9 @@ var logo_displaying = true
 # Startup delay
 var startup_delay = true
 var startup_delay_timer = 0
+
+# Transition at the end
+var transition_time_out = 0
 
 # Skip this scene
 var skip_splash = false
@@ -52,7 +56,7 @@ func _process(delta):
 			1:
 				process_jam_logo(delta)
 			2:
-				go_to_main_menu()
+				go_to_main_menu(delta)
 
 
 func process_dev_logo(delta):
@@ -91,6 +95,9 @@ func process_jam_logo(delta):
 			logo_displaying = true
 
 
-func go_to_main_menu():
-# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/MainMenuScene.tscn")
+func go_to_main_menu(delta):
+	if transition_time_out < 1:
+		transition_time_out += (2 * delta)
+		transition_overlay_sprite.modulate.a = transition_time_out
+	else:
+		get_tree().change_scene("res://scenes/MainMenuScene.tscn")
