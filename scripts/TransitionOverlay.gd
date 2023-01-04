@@ -6,7 +6,7 @@ onready var transition_overlay_sprite = $TransitionSprite
 
 
 func _ready():
-	transition_overlay_sprite.modulate.a = 0
+	transition_overlay_sprite.modulate.a = 1
 
 
 func _process(delta):
