@@ -14,6 +14,10 @@ config/name="Base 2D Sample Project"
 run/main_scene="res://scenes/SplashScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalVar="*res://scenes/GlobalScene.tscn"
+
 [display]
 
 window/size/width=1280
